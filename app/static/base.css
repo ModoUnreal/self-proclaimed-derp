@@ -1,0 +1,67 @@
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+}
+
+footer a{
+    right: 0;
+    left: 0;
+    margin: 0px;
+    padding: 1rem;
+    text-align: center;
+}
+
+#title {
+    text-align: center;
+}
+
+#menubar {
+    text-align: center;
+}
+
+#menubar a {
+    padding-right: 15px;
+}
+
+#title h2 {
+    text-align: center;
+}
+
+#submit {
+    position: absolute;
+    top: 0px;
+    right: 0px
+}
+
+.post-title td {
+    font-family: arial, sans-serif;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+
+}
+
+.comments {
+    font-size: 10px;
+}
+
+
+
+input[type=text] {
+    width: 50px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}

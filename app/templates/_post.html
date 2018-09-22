@@ -1,0 +1,25 @@
+<div id="post-container">
+
+    <table>
+
+        <tr valign="top">
+
+            <div class="post-title">
+                <td><a href="{{ post.text }}">{{ post.title }}</a> by <a href="{{ url_for('user', username=post.author.username) }}">{{ post.author.username }}</a></td>
+
+            <br>
+            {% for topic in post.topics if post.topics %}
+            <td><a href="{{ url_for('search_topic', topic_query=topic.id) }}">{{ topic.tag_name }}</a></td>
+            {% endfor %}
+
+            </div>
+
+        </tr>
+    
+    </table>
+
+    <div class="comments">
+        <td><a href="{{ url_for('item', post_id=post.id) }}">View Comments</a></td>
+    </div>
+
+</div>

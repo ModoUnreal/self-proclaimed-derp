@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Self Proclaimed Derp</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='base.css') }}">
+</head>
+<body>
+
+
+    <div id="title">
+        <h2>Alex Hurtado: Self Proclaimed Derp</h2>
+    </div>
+
+    <div id="menubar">
+
+        <a href="{{ url_for('index') }}">Small Thoughts</a>
+        <a href="{{ url_for('index') }}">Articles</a>
+        <a href="{{ url_for('index') }}">About</a>
+
+
+    </div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <br>
+    {% block content %}{% endblock %}
+
+    <hr>
+    <footer>
+        <a href="{{ url_for('faq') }}">FAQ</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </footer>
+</body>
+</html>
